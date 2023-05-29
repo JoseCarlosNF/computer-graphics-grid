@@ -1,4 +1,4 @@
 lint:
-	blue algorithms/ main.py
-	isort algorithms/ main.py
+	blue algorithms/ libs/ __main__.py
+	isort algorithms/ libs/ __main__.py
 
