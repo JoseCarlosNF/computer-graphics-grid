@@ -9,7 +9,7 @@ def log(module_name: str):
     logging.basicConfig(
         level=logging.DEBUG,
         datefmt='%Y-%m-%d %H:%M:%S',
-        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+        format='%(asctime)s %(levelname)8s - %(name)s - %(message)s',
         handlers=[handler_stdout],
     )
     return logging.getLogger(module_name)
