@@ -1,3 +1,6 @@
+from libs.logger import log
+
+
 class GridDataStructure:
     def __init__(self, extent):
         self.extent = extent
@@ -5,20 +8,21 @@ class GridDataStructure:
         self.rendered_cells = [[0 for _ in range(self.dimension)] for _ in range(self.dimension)]
         self.selected_cells = [[0 for _ in range(self.dimension)] for _ in range(self.dimension)]
         self.selected_count = 0
+        self.log = log(self.__class__.__name__)
 
     def render_cell(self, cell):
         if self._cell_is_in_bounds(cell):
             x, y = self.coordinate_to_index(cell)
             self.rendered_cells[x][y] = 1
         else:
-            print(f'WARNING: render_cell command ignored. Cell {cell} is out of bounds.')
+            self.log.warning(f'render_cell comando ignorado. Celula {cell} fora do grid.')
 
     def clear_cell(self, cell):
         if self._cell_is_in_bounds(cell):
             x, y = self.coordinate_to_index(cell)
             self.rendered_cells[x][y] = 0
         else:
-            print(f'WARNING: clear_cell command ignored. Cell {cell} is out of bounds.')
+            self.log.warning(f'clear_cell comando ignorado. Celula {cell} fora do grid.')
 
     def select_cell(self, cell):
         if self._cell_is_in_bounds(cell):
@@ -27,7 +31,7 @@ class GridDataStructure:
                 self.selected_count += 1
                 self.selected_cells[x][y] = self.selected_count
         else:
-            print(f'WARNING: select_cell command ignored. Cell {cell} is out of bounds.')
+            self.log.warning(f'select_cell comando ignorado. Celula {cell} fora do grid.')
 
     def clear_all(self):
         for i in range(self.dimension):

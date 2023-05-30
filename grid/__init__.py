@@ -1,4 +1,6 @@
 from tkinter import Tk, Canvas, Label, Frame, Button, Entry
+
+from libs.logger import log
 from .grid_data_structure import GridDataStructure
 
 
@@ -31,6 +33,7 @@ class Grid:
         self.canvas.pack()
 
         self.canvas.bind('<Button-1>', self._on_canvas_click)
+        self.log = log(self.__class__.__name__)
 
 
     def add_algorithm(self, name, parameters=None, algorithm=None):
@@ -73,7 +76,7 @@ class Grid:
         y = (self.grid_size[1]) - raw_y
 
         if 0 <= x <= self.grid_size[0] and 0 <= y <= self.grid_size[1]:
-            print(x, y)
+            self.log.info(f'Clicou no ponto {(x, y)}')
             cell_x = int(x // self.cell_size[0]) - self.raster.extent
             cell_y = int(y  // self.cell_size[1]) - self.raster.extent
             self._select_cell((cell_x, cell_y))
