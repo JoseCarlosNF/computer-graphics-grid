@@ -72,8 +72,10 @@ class Bresenham(BaseAlgorithm):
 
         # Obtenção dos pontos
         points = self.__get_points(selected_cells[0], selected_cells[1])
+        self.log.info(f'Pontos obtidos {points}')
 
         # Rasterização dos pontos selecionados
         for cell in points:
-            self.log.debug(f'Pintando ponto {cell}')
+            if self.debug:
+                self.log.debug(f'Pintando ponto {cell}')
             self.grid.render_cell(cell)
