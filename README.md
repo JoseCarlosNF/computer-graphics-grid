@@ -13,52 +13,65 @@
         1. Jose Carlos Noronha Ferreira - 201804940020
 ```
 
-## Como rodar o projeto
+## 🚀 Como rodar o projeto
 
-- 📦 Instalando as **dependências**
+- Instalando as **dependências**
 
 ```
 pip install -r requirements.txt
 ```
 
-- 🚀 Executando o projeto
+- Executando o projeto
 
 ```
 python .
 ```
 
-## Como utilizar
+## 🎉 Agradecimentos
 
-A seguir descrevemos os como utilizar e parametrizar cada um dos tipos de
-rasterização implementados. Deixo aqui um grande agradecimento ao
-[@rodrigodivino][] por nos poupar o estudo do absoluto zero sobre o [tkinter][],
-para construir a interface. ~A interface pode não estar tão polida, mas cumpri
-seu papel.~ 
+Deixo aqui um grande agradecimento ao [@rodrigodivino][] por nos poupar o estudo
+do absoluto zero sobre o [tkinter][], para construir a interface. ~A interface
+pode não estar tão polida, mas cumpri seu papel.~ 
 
-### Bresenham
+## 📌 Dicas de utilização
 
-### Círculos
+**Em todos os casos**, para executar o algoritmo é necessário clicar no botão `Run`,
+ao lado do nome da opção que será executada.
 
-### Curvas
+É **recomendado** que após as operações, **com exceção dos casos onde
+pretende-se utilizar as operações de transformação ou projeção**, o elemento
+rasterizado seja limpo do grid. Isso pode ser feito ao clicar no botão `Clear
+All` na parte superior da interface.
 
-### Polilinhas
+## Bresenham
 
-### Preenchimento recursivo
+- **Selecione 2 pontos** dentro do grid apresentado.
 
-### Recorte de linha
+## Círculos
 
-### Recorte de polígonos
+- **Selecione o `centro`** do círculo.
+- **Informe o `raio`** no campo ao lado do nome na interface.
 
-### Transformações
+## Curvas
 
-#### Translação
-#### Rotação
-#### Escala
+## Polilinhas
 
-### Projeções
+## Preenchimento recursivo
 
-#### Ortográfica
-#### Perspectiva
+## Recorte de linha
+
+## Recorte de polígonos
+
+## Transformações
+
+### Translação
+### Rotação
+### Escala
+
+## Projeções
+
+### Ortográfica
+### Perspectiva
 
 <!-- Links -->
 [@rodrigodivino]: https://github.com/rodrigodivino
