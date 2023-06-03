@@ -18,14 +18,19 @@
 - Instalando as **dependências**
 
 ```
-pip install -r requirements.txt
+make install
 ```
 
 - Executando o projeto
 
 ```
-python .
+make run
 ```
+
+**Caso os comandos acima não funcionem**, possivelmente você não tem o `make`
+instalado. O que não é necessariamente um problema. **Abra o arquivo
+`makefile`** para saber o que tem por trás desses comandos **e execute
+manualmente os correspondentes**.
 
 ## 🎉 Agradecimentos
 
