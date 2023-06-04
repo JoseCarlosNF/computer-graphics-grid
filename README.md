@@ -11,6 +11,7 @@
 
       Aluno:
         1. Jose Carlos Noronha Ferreira - 201804940020
+        2. Marcos Eduardo Nascimento Lima - 201804940007
 ```
 
 ## 🚀 Como rodar o projeto
