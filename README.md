@@ -1,6 +1,6 @@
 # Algoritmos de rasterização
 
-```
+```plaintext
                           UIVERSIDADE FEDERAL DO PARÁ
                     Instituto de Ciências Exatas e Naturais
                             Faculdade de Computação

@@ -7,11 +7,11 @@ dev:
 
 install:
 	python -m venv venv && \
-	source venv/bin/activate && \
+	source venv/bin/activate.fish && \
 	pip install -r requirements.txt
 
 run:
-	source venv/bin/activate && \
+	source venv/bin/activate.fish && \
 	python .
 
 lint:
